@@ -1,57 +1,31 @@
 package com.fintech.paymentledger.dto;
 
-import java.math.BigDecimal;
-import java.util.UUID;
-
 public class TransferResult {
 
-    private UUID transactionId;
+    private boolean success;
+    private String message;
 
-    private UUID fromWalletId;
-
-    private UUID toWalletId;
-
-    private BigDecimal amount;
-
-    private String status;
-
-    public UUID getTransactionId() {
-        return transactionId;
+    public TransferResult() {
     }
 
-    public void setTransactionId(UUID transactionId) {
-        this.transactionId = transactionId;
+    public TransferResult(boolean success, String message) {
+        this.success = success;
+        this.message = message;
     }
 
-    public UUID getFromWalletId() {
-        return fromWalletId;
+    public boolean isSuccess() {
+        return success;
     }
 
-    public void setFromWalletId(UUID fromWalletId) {
-        this.fromWalletId = fromWalletId;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
-    public UUID getToWalletId() {
-        return toWalletId;
+    public String getMessage() {
+        return message;
     }
 
-    public void setToWalletId(UUID toWalletId) {
-        this.toWalletId = toWalletId;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

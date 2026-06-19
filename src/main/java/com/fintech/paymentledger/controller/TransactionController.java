@@ -14,10 +14,10 @@ public class TransactionController {
         this.transactionService = transactionService;
     }
 
-    @PostMapping
-    public Transaction createTransaction(@RequestBody Transaction transaction) {
-        return transactionService.saveTransaction(transaction);
-    }
+    //@PostMapping
+    //public Transaction createTransaction(@RequestBody Transaction transaction) {
+        //return transactionService.saveTransaction(transaction);
+    //}
 
     @GetMapping("/test")
     public String test() {

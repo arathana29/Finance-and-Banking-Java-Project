@@ -1,30 +1,38 @@
 package com.fintech.paymentledger.dto;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 public class TransferRequest {
 
-    private UUID fromWalletId;
-
-    private UUID toWalletId;
-
+    private String fromUsername;
+    private String toUsername;
     private BigDecimal amount;
 
-    public UUID getFromWalletId() {
-        return fromWalletId;
+    public TransferRequest() {
     }
 
-    public void setFromWalletId(UUID fromWalletId) {
-        this.fromWalletId = fromWalletId;
+    public TransferRequest(String fromUsername,
+                           String toUsername,
+                           BigDecimal amount) {
+        this.fromUsername = fromUsername;
+        this.toUsername = toUsername;
+        this.amount = amount;
     }
 
-    public UUID getToWalletId() {
-        return toWalletId;
+    public String getFromUsername() {
+        return fromUsername;
     }
 
-    public void setToWalletId(UUID toWalletId) {
-        this.toWalletId = toWalletId;
+    public void setFromUsername(String fromUsername) {
+        this.fromUsername = fromUsername;
+    }
+
+    public String getToUsername() {
+        return toUsername;
+    }
+
+    public void setToUsername(String toUsername) {
+        this.toUsername = toUsername;
     }
 
     public BigDecimal getAmount() {
